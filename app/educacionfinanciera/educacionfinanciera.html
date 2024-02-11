@@ -1,0 +1,4208 @@
+<style type="text/css">
+
+    #pc1{        
+        display: none;
+        position: initial;
+        width: 100%;
+        height: auto;
+        background: #FFF;        
+        margin-top: 10px;
+        z-index: 10;
+        font-size: 14px;
+        padding-top: 50px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    #pc2{    
+        display: none;    
+        position: initial;
+        width: 100%;
+        height: auto;
+        background: #FFF;        
+        margin-top: 10px;
+        z-index: 10;
+        font-size: 14px;
+        padding-top: 50px;
+        padding-left: 70px;
+        padding-right: 70px;
+
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    
+    #pc2.hide {
+        opacity: 0;
+    }
+
+    #Menu{
+        display: none;
+    }
+
+    h5 {
+        font-size: 33px;
+        font-weight: 300;
+        color: #FFF;
+        margin-bottom: 0.7rem;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0rem;
+        color: #FFF;
+    }
+    header {
+        padding: 100px 0 0;
+        text-align: center;
+        padding-bottom: 0px;
+        color: #FFF;
+    }
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: 0px;
+    }
+
+    @media (max-width: 767px){
+      #imgC{
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 1370px){
+         /*#imgC{
+            display: none !important;
+          }*/
+          /*#tempDiv{
+            display: none !important;
+          }
+          #imgC3{
+            display: inline-block !important;
+          }*/
+
+    }
+
+
+
+</style>
+<div ng-controller="edf">    
+    <!-- Nav Menu -->
+   
+    <header class="bg-gradient" id="home">
+        <div class="container row align-items-center" style="max-width: 100% !important; margin-top: -90px;">
+                
+            <div class="col-xs-12 col-sm-6 col-md-2">
+            </div>
+
+
+            <!--<div id="imgC3" class="col-xs-12 col-sm-6 col-md-2" style="display: none;">                                
+            </div>-->
+
+  
+
+            <div class="col-xs-12 col-sm-12 col-md-5 vcenter">
+                <div class="row rowForm">
+                    <div class="col-md-12" style="padding-bottom: 5px;">
+                        <img src="images/LogoBLC.png" alt="phone" class="img-fluid" width="290" height="290">
+                        <br/><br/>
+                        <h4 style="color: #FFF;">
+                            ESPACIO FINANCIERO CREDICER
+                        </h4>                        
+                    </div>                  
+                    
+                    <div class="col-md-12" style="text-align: justify;">
+                        <p style="color: #FFF;">
+                            En compromiso con nuestros clientes y usuarios, les brindamos un espacio con información y consejos sobre el correcto uso del dinero, impulsar y fomentar el ahorro mediante herramientas que les permitan tomar decisiones adecuadas sobre los productos o servicios financieros que tienen disponibles, como hacer uso de ellos de manera asertiva cuidando el bienestar personal y familiar.
+                        </p>  
+                    </div>
+                </div>
+            </div>
+
+            <div id="imgC" class="col-xs-12 col-sm-6 col-md-3" >
+                <img src="images/2daSeccion.png" alt="phone" class="img-fluid">
+            </div>
+
+        </div>        
+    </header>
+
+    <!-- ***************************************************************************************************************************************************************************** -->
+    <!-- Productos -->
+    <div class="section light-bg" id="productos" style="background: #FFF !important;">
+
+        <div class="container" id="escritorioProductos3">
+
+            <div class="section-title">
+
+                <small>Servicios financieros</small>
+
+                <h4>OBJETIVO DEL PROGRAMA EDUCATIVO</h4>
+
+                <p>
+                    Comunicar al público en general temas de Educación Financiera para que mediante diversos mecanismos puedan adquirir los conocimientos y habilidades para el uso adecuado de los productos y servicios financieros a fin de mejorar sus finanzas asegurando una calidad de vida a corto y largo plazo.
+                </p>
+
+            </div>
+
+            <div class="card-deck">  
+                       <!-- 14 SEM -->
+                    <div class="card pricing popular text-center">
+
+                   
+
+                        <div class="card-head">
+    
+                            <small class="text-primary">Semanal</small>    
+                            <h5>
+                                <strong style="color: #633991;">
+                                    Consejo para tu bolsillo
+                                </strong>
+                            <h5>
+                            <br>
+                            <i class="fas fa-wallet" style="color: #633991; font-size: 90px;"></i>
+    
+                        </div>
+    
+                        <div class="card-body">
+                            <a id="educacion" class="btn btn-primary btn-lg btn-block" style="color: #FFF;" ng-click="viewInput()">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+    
+    
+                    <!-- 26 SEM -->
+                    <div class="card pricing popular text-center">
+                   
+                        <div class="card-head">
+    
+                            <small class="text-primary">Semanal</small>    
+                            <h5>
+                                <strong style="color: #633991;">
+                                    Educación financiera en tu institución
+                                </strong>
+                            <h5>
+                            <i class="fas fa-landmark" style="color: #633991; font-size: 90px;"></i>
+    
+                        </div>
+    
+                        <div class="card-body">
+                            <a id="educacion" class="btn btn-primary btn-lg btn-block" style="color: #FFF;" ng-click="viewInput2()">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+    
+                    </div>
+
+                 
+            </div>
+            <!-- // end .pricing -->
+
+        
+        </div>        
+    </div>
+
+
+    <div id="pc1">
+        <div style=" border: solid 2px #767676; padding: 15px; border-radius: 20px;">
+            <div class="row" >
+                <div class="col-md-3 text-center">
+                    <h4>12.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/12.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        href="https://www.credicer.mx/images/condicef/cpb/12.jpg"
+                        >
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                    
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>13.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/13.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                   
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>14.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/14.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/14.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "                        
+                        >
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>15.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/15.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/15.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>16.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/16.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/16.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>17.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/17.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/17.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>18.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/18.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/18.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>19.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/19.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/19.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>20.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/20.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/20.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>21.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/21.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/21.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>22.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/22.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/22.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>23.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/23.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/23.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>24.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/24.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/24.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>25.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/25.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/25.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>26.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/26.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/26.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>27.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/27.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/27.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>28.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/28.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/28.jpg'); 
+                        position: relative; 
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>29.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/29.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/29.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>30.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/30.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/30.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>31.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/31.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/31.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>32.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/32.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/32.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>33.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/33.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/33.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>34.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/34.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/34.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>35.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/35.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/35.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>36.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/36.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/36.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>37.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/37.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/37.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>38.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/38.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/38.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>39.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/39.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/39.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>40.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/40.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/40.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>41.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/41.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/41.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>42.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/42.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/42.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>43.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/43.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/43.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>44.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/44.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/44.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>46.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/46.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/46.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>47.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/47.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/47.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>48.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/48.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/48.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>49.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/49.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/49.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>50.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/50.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/50.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>51.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/51.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/51.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <hr style="margin-top: 50px; background-color: red;"/>
+
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-md-12">
+                        <h6>
+                            <strong style="color: #633991;">
+                                2022
+                            </strong>
+                        <h6>
+                    </div>
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>1.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>2.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <h4>3.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>4.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>5.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>6.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/6.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/6.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>7.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/7.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/7.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>8.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/8.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/8.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>9.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/9.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/9.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>10.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/10.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/10.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>11.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/11.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/11.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>12.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/12.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/12.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>13.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/13.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/13.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>14.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/14.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/14.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>15.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/15.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/15.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>16.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/16.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/16.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>17.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/17.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/17.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>18.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/18.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/18.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>19.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/19.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/19.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4>20.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/20.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/20.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3 text-center">
+                    <h4>21.- </h4>
+                    <a href="https://www.credicer.mx/images/condicef/cpb/2022/21.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/cpb/2022/21.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+
+
+
+            </div>
+        </div>    
+    </div>
+
+    <div id="pc2">
+        <div style=" border: solid 2px #767676; padding: 15px; border-radius: 20px;">
+            <div class="row" >
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            MAYO
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        href="https://www.credicer.mx/images/condicef/Mayo/1.jpg"
+                        >
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                    
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        href="https://www.credicer.mx/images/condicef/Mayo/2.jpg"
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                   
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "                        
+                        >
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        "
+                        href="https://www.credicer.mx/images/condicef/Mayo/4.jpg"
+                        >
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            JUNIO
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Junio/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Junio/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Junio/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Junio/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Junio/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Junio/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Junio/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Junio/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Junio/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Junio/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            JULIO
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Julio/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Julio/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Julio/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Julio/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Julio/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Julio/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Julio/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Julio/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Julio/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Julio/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Agosto
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Agosto/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Agosto/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Agosto/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Agosto/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Agosto/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Agosto/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Agosto/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Agosto/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Agosto/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Agosto/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Septiembre
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Septiembre/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Septiembre/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Septiembre/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Septiembre/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Septiembre/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Septiembre/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Septiembre/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Septiembre/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Septiembre/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Septiembre/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Octubre
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Octubre/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Octubre/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Octubre/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Octubre/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Octubre/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Octubre/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Octubre/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Octubre/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Octubre/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Octubre/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Noviembre
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Noviembre/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Noviembre/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Noviembre/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Noviembre/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Noviembre/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Noviembre/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Noviembre/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Noviembre/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Noviembre/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Noviembre/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Diciembre
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Diciembre/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Diciembre/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Diciembre/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Diciembre/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Diciembre/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Diciembre/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Diciembre/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Diciembre/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Diciembre/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Diciembre/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <hr style="margin-top: 50px;">
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            2022
+                        </strong>
+                    <h6>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Enero
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Enero2/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Enero2/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Enero2/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Enero2/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Enero2/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Enero2/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Enero2/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Enero2/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Enero2/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Enero2/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Febrero
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Febrero2/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Febrero2/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Febrero2/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Febrero2/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Febrero2/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Febrero2/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Febrero2/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Febrero2/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Marzo
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Marzo2/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Marzo2/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Marzo2/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Marzo2/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Marzo2/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Marzo2/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Marzo2/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Marzo2/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Marzo2/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Marzo2/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Abril
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Abril2/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Abril2/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Abril2/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Abril2/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Abril2/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Abril2/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Abril2/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Abril2/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Abril2/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Abril2/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <h6>
+                        <strong style="color: #633991;">
+                            Mayo
+                        </strong>
+                    <h6>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo2/1.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo2/1.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div> 
+                    </a>                     
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo2/2.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo2/2.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>
+                    </a>
+                        
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo2/3.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo2/3.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>                      
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo2/4.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo2/4.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+    
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+    
+                        </div>  
+                    </a>
+                    
+                </div>
+
+                <div class="col-md-12" style="margin-top: 15px;"></div>
+
+                <div class="col-md-3">
+                    <a href="https://www.credicer.mx/images/condicef/Mayo2/5.jpg" target="_blank">
+                        <div style="
+                        background: url('images/condicef/Mayo2/5.jpg'); 
+                        position: relative;
+                        background-position: center center; height: 150px; width: 100%; 
+                        border-radius: 15px; border: solid 1px #767676;
+                        box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
+                        cursor: pointer;
+                        ">
+
+                        <div style="
+                        position: absolute;
+                        width: 100%; 
+                        height: 30px; 
+                        background: rgb(19, 31, 87); 
+                        opacity: 0.96;
+                        bottom: 0px;
+                        border-bottom-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        padding-top: 5px;
+                        color: #FFF;" class="text-center">
+                            Ver
+                        </div>
+
+                        </div>  
+                    </a>
+                      
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+    <footer class="my-3 text-center">
+
+        <!-- Copyright removal is not prohibited! -->
+        <div class="row" style="width: 100%;">
+
+            <div class="col-md-4 col-xs-12">
+            </div>
+            <div class="col-md-4 col-xs-12" style="padding: 45px;">      
+                                               
+                <small>                    
+                    <a href="Terminos/contrato.html" class="m-2" target="_blank">Terminos y condiciones</a>
+                    |
+                    <a href="Terminos/marco.html" class="m-2" target="_blank">Marco jurídico</a>
+                    <br>
+                    <a href="Terminos/privacidadcandidatos.html" class="m-2" target="_blank">Aviso de privacidad</a>
+                </small>
+            </div>
+            <div class="col-md-4 col-xs-12">
+            </div>
+        </div>
+            
+
+    </footer>
+
+
+</div>
+
+<!-- popover bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<!-- Plugins JS -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+<!-- Carrusel JS -->
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '309172763053630');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=309172763053630&ev=PageView
+    &noscript=1"/>
+</noscript>

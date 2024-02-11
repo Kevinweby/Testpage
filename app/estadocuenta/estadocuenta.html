@@ -1,0 +1,427 @@
+<style type="text/css">
+    #printableContent {
+      float:left;
+      width: 100%;
+      font-family:'Arial';
+    }
+    
+        #Menu{
+            display: none;
+        }
+    
+        h5 {
+            font-size: 33px;
+            font-weight: 300;
+            color: #FFF;
+            margin-bottom: 0.7rem;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 0rem;
+            color: #FFF;
+        }
+        header {
+            padding: 100px 0 0;
+            text-align: center;
+            padding-bottom: 0px;
+            color: #FFF;
+        }
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: 0px;
+        }
+    
+        #socialmedia{
+            display: none;
+        }
+        @media (max-width: 767px){
+          #imgC{
+            display: none !important;
+          }
+        }
+    
+        @media (max-width: 1370px){
+             /*#imgC{
+                display: none !important;
+              }*/
+              /*#tempDiv{
+                display: none !important;
+              }
+              #imgC3{
+                display: inline-block !important;
+              }*/
+    
+        }
+    </style>
+    <div ng-controller="estadocuentaController" id="Test">    
+        <!-- Nav Menu -->
+        <div id="printableContent" style="padding: 60px;">
+    
+            <div class="row" style="background-color: #FFF; margin-top: -40px;">
+                <div class="col-12 text-center" style="height: 50px;">
+                    <button id="btn1" class="btn btn-success" ng-click="convertPDF()">
+                        Descargar
+                    </button>
+                    <button id="btn3" class="btn btn-secondary" ng-click="GetContrato()">
+                        Contrato
+                    </button>
+                    <button id="btn2" class="btn btn-success" style="background: #353481; color: #FFF;" ng-click="Test()">
+                        < Regresar
+                    </button>
+                </div>
+            </div>
+    
+            <div class="row" style="border: solid 3px rgb(37, 37, 37); background-color: #FFF;">
+                <div class="col-2">
+                    <img src="images/Logo2.jpg" alt="iphone" class="img-fluid" style="width: 88%;">
+                </div>
+                <div class="col-7">
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        CRECER SOLUCION INMEDIATA, S.A.P.I. de C.V., SOFOM, E.N.R
+                    </p>
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        PUERTO DE CARTAGENA 215
+                    </p>
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        ARBIDE, LEON, Guanajuato
+                    </p>
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        CP 37360 RFC:PCF130704EG3
+                    </p>
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        Número telefónico 01 (477) 7166483
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        Fecha de Emsión: {{fechaLm[1]}}/{{fechaLm[0]}}/{{fechaLm[2]}}
+                    </p>
+                    <p style="color: rgb(32, 32, 32); margin: 0px;">
+                        Folio: {{cl.documentNo}}
+                    </p>
+                </div>
+        
+            </div>
+            <div class="row" style="height: 40px;"></div>
+            <div class="row" style="background-color: #FFF;">
+                <div class="col-6">
+                    <div class="row" style="background-color: #FFF;">
+                        <div class="col-2 text-center" style="background-color: black; color: #FFF;">
+                            Clienta
+                        </div>
+                        <div class="col-6">
+                            Credito No: {{cl.documentNo}}
+                        </div>
+                    </div> 
+                    <div class="row" style="border: solid 3px rgb(37, 37, 37); background-color: #FFF;">
+                        <div class="col-12">
+                            <p style="color: rgb(32, 32, 32); margin: 0px;">
+                                {{cl.names}} {{cl.surnamep}} {{cl.surnamem}}
+                            </p>
+                            <p style="color: rgb(32, 32, 32); margin: 0px;">
+                                {{cl.street}} #{{cl.externalnumber}}
+                            </p>
+                            <p style="color: rgb(32, 32, 32); margin: 0px;">
+                                {{cl.colony}}
+                            </p>
+                            <p style="color: rgb(32, 32, 32); margin: 0px;">
+                                {{cl.town$_identifier}}, {{cl.region$_identifier}} CP {{cl.postalCode}}
+                            </p>
+                        </div>            
+                    </div>                
+                    PERIODO DEL {{cl.documentdate | date:'dd-MM-yyyy'}} AL {{lastCredito[0].collectiondate | date:'dd-MM-yyyy'}}
+                </div>
+                <div class="col-6">
+                   <div class="row">
+                        <div class="col-12" style="background-color: black; color: #FFF; font-size: 20px;">
+                            CREDICER 14 SEMANAS
+                        </div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            FECHA CORTE
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{lastCredito[0].collectiondate | date:'dd-MM-yyyy'}}
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            FECHA LIMITE DE PAGO
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{lastCreditoALLBack[0].collectiondate | date:'dd-MM-yyyy'}}
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            PROXIMO PAGO
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{lastCreditoNext[0].collectiondate | date:'dd-MM-yyyy'}}
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            IMPORTE PAGO
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{lastCreditoALL[0].amount | currency}}
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            No. PAGOS
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{lastCreditoALL.length}}
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            IMPORTE PRESTAMO
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{cl.totaltopay | currency}}
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            COMISIÓN POR APERTURA
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">                        
+                            {{(cl.amount * 0.05) | currency}}
+                        </div>
+                        <div class="col-1"></div>   
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            MONEDA PRESTAMO
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            MXN
+                        </div>
+                        <div class="col-1"></div>  
+                        <div class="col-5" style="background-color: black; color: #FFF;">
+                            SALDO INSOLUTO
+                        </div>
+                        <div class="col-6" style="border: solid 3px rgb(37, 37, 37); text-align: right;">
+                            {{(cl.totaltopay - cl.amount) | currency}}
+                        </div>
+                        <div class="col-1"></div>  
+                        
+                   </div>
+                </div>
+    
+                <div class="col-12 text-center" style="background-color: black; color: #FFF; font-size: 20px; margin-top: 2px;">
+                    Detalles de Movimiento
+                </div>
+                <div class="col-12">
+                    Comisiones: ÚNICO pago del 5 % por apertura de crédito sobre el monto del préstamo
+                </div>
+                <div class="col-12 text-center" style="font-size: 20px; margin-top: 13px;">
+                    {{cl.financialService$_identifier}}
+                </div>
+                <div class="col-12 text-center" >
+                    <div class="row">
+                        <div class="col-2" style="border: solid 3px rgb(37, 37, 37);">
+                            Fecha de pago
+                        </div>
+                        <div class="col-2" style="border: solid 3px rgb(37, 37, 37);">
+                            Monto a pagar
+                        </div>
+                        <div class="col-1" style="border: solid 3px rgb(37, 37, 37);">
+                            Capital
+                        </div>
+                        <div class="col-2" style="border: solid 3px rgb(37, 37, 37);">
+                            Intereses
+                        </div>
+                        <div class="col-1" style="border: solid 3px rgb(37, 37, 37);">
+                            IVA
+                        </div>
+                        <div class="col-2" style="border: solid 3px rgb(37, 37, 37);">
+                            Su Pago
+                        </div>
+                        <div class="col-2" style="border: solid 3px rgb(37, 37, 37);">
+                            Saldo de prestamo
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-repeat="c in cr"  ng-if="cl.financialService == '386513535FA445DB95C955B757185055'">
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.collectiondate | date:'dd-MM-yyyy'}}
+                        </div>
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.amount | currency }}
+                        </div>
+    
+                        <div class="col-1" ng-if="c.tipocobro == 'C'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.amount | currency }}
+                        </div>
+                        <div class="col-1" ng-if="c.tipocobro == 'I'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{0 | currency}}
+                        </div>
+                        
+                        <div class="col-2" ng-if="c.tipocobro == 'C'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{0 | currency}}
+                        </div>
+                        <div class="col-2" ng-if="c.tipocobro == 'I'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{(c.amount/1.16 ) | currency}}
+                        </div>
+    
+                        <div class="col-1" ng-if="c.tipocobro == 'C'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{0 | currency}}
+                        </div>
+                        <div class="col-1" ng-if="c.tipocobro == 'I'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.amount - (c.amount/1.16 ) | currency}}
+                        </div>
+    
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.totalPaid | currency}}
+                        </div>
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{cl.totaltopay - c.recordTime | currency}}
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-repeat="c in cr"  ng-if="cl.financialService == '141D4CAAB6DC4B5592155C54D25374FE'">
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.collectiondate | date:'dd-MM-yyyy'}}
+                        </div>
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.amount | currency }}
+                        </div>
+    
+                        <div class="col-1" ng-if="c.tipocobro == 'C'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.amount | currency }}
+                        </div>
+                        <div class="col-1" ng-if="c.tipocobro == 'I'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{0 | currency}}
+                        </div>
+                        
+                        <div class="col-2" ng-if="c.tipocobro == 'C'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{0 | currency}}
+                        </div>
+                        <div class="col-2" ng-if="c.tipocobro == 'I'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{(c.amount/1.16 ) | currency}}
+                        </div>
+    
+                        <div class="col-1" ng-if="c.tipocobro == 'C'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{0 | currency}}
+                        </div>
+                        <div class="col-1" ng-if="c.tipocobro == 'I'" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.amount - (c.amount/1.16 ) | currency}}
+                        </div>
+    
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{c.totalPaid | currency}}
+                        </div>
+                        <div class="col-2" style="border-left: solid 3px rgb(37, 37, 37); border-right: solid 3px rgb(37, 37, 37);">
+                            {{cl.totaltopay - c.recordTime | currency}}
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row" style="margin-top: 60px; width: 100%;" ng-if="cl.financialService == '386513535FA445DB95C955B757185055'">
+                    <div class="col-6" style="border: solid 3px rgb(37, 37, 37);">
+                        COSTO ANUAL TOTAL (CAT) 475.50%
+                    </div>
+                    <div class="col-6" style="border: solid 3px rgb(37, 37, 37);">
+                        INTERES ORDINARIO 103.05%
+                    </div>
+                </div>
+    
+                <div class="row" style="margin-top: 60px; width: 100%;" ng-if="cl.financialService == '141D4CAAB6DC4B5592155C54D25374FE'">
+                    <div class="col-6" style="border: solid 3px rgb(37, 37, 37);">
+                        COSTO ANUAL TOTAL (CAT) 1272.50% 
+                    </div>
+                    <div class="col-6" style="border: solid 3px rgb(37, 37, 37);">
+                        INTERES ORDINARIO 146.94%
+                    </div>
+                </div>
+                <div class="col-12">
+                    <strong style="color: black;">AVISOS:</strong> Cuando la fecha límite de pago corresponda a un día inhábil bancario, el pago podrá realizarse sin cargo.
+                    Contratar créditos por arriba de tu capacidad de pago puede afectar tu historial crediticio. Incumplir tus obligaciones te puede generar comisiones e
+                    intereses moratorios. El avalista, obligado solidario o coacreditado responderá como obligación principal por el total del pago frente a la Entidad
+                    Financiera.
+                </div>
+    
+                <div class="col-6" style="padding: 0px; margin-top: 20px;"> 
+                    <div class="row">
+                        <div class="col-12 text-center" style="background-color: black; color: #FFF;">
+                            Pagos adelantados
+                        </div>
+                        <div class="col-2 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            Fecha
+                        </div>
+                        <div class="col-4 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            Monto pagado
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            No. pago restante
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            Saldo Insoluto
+                        </div>
+                        <div class="col-2 text-center" style="border: solid 3px rgb(37, 37, 37); height: 40px;"></div>
+                        <div class="col-4 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-4" style="padding: 0px; margin-top: 20px;">
+                    <div class="row">
+                        <div class="col-12 text-center" style="background-color: black; color: #FFF;">
+                            Cargos Objetados
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            Fecha
+                        </div>
+                        <div class="col-6 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            Folio/Clave UNE
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            Monto
+                        </div>
+                        
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37); height: 40px;"></div>
+                        <div class="col-6 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            
+                        </div>
+                        <div class="col-3 text-center" style="border: solid 3px rgb(37, 37, 37);">
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 text-center" style="padding: 0px; margin-top: 20px;">
+                    Numero de registro RECA 13478-439-015407/06-03758-0921
+                </div>
+                <div class="col-12" style="padding: 0px; margin-top: 20px;">
+                    Crecer Solución Inmediata, S.A.P.I. de C.V., SOFOM, E.N.R. recibe consultas, reclamaciones o aclaraciones, en su Unidad especializada de Atención
+                    a Usuarios, ubicada en Puerto de Cartagena 215, Col. Arbide, C.P. 37360, León, Guanajuato, México y por correo electrónico
+                    sofom@crecersofom.mx o al teléfono 477 7166483, así como en cualquiera de sus sucursales u oficinas.
+                    En caso de no obtener respuesta satisfactoria, podrá acudir a CONDUSEF o visitar la Página de internet www.condusef.gob.mx
+                    Teléfono: 01(800) 999-80-80
+                </div>
+            </div>
+    
+        </div>
+    
+        
+       
+    </div>
+    
+    <!-- popover bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!-- Plugins JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Carrusel JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>

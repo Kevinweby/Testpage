@@ -1,0 +1,339 @@
+<style type="text/css">
+    #Menu{
+        display: none;
+    }
+
+    h5 {
+        font-size: 33px;
+        font-weight: 300;
+        color: #FFF;
+        margin-bottom: 0.7rem;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0rem;
+        color: #FFF;
+    }
+    header {
+        padding: 100px 0 0;
+        text-align: center;
+        padding-bottom: 0px;
+        color: #FFF;
+    }
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        /*margin-right: -15px;
+        margin-left: 0px;*/
+    }
+
+    .form-control:disabled, .form-control[readonly] {
+        background-color: #9c9c9c;
+        opacity: 1;
+        color: #FFF;
+    }
+
+    @media (max-width: 767px){
+      #imgC{
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 1370px){
+         /*#imgC{
+            display: none !important;
+          }*/
+          /*#tempDiv{
+            display: none !important;
+          }
+          #imgC3{
+            display: inline-block !important;
+          }*/
+
+    }
+</style>
+<div ng-controller="PromotoraController">    
+    <!-- Nav Menu -->
+   
+    <header class="bg-gradient" id="home" style="height: 1200px; width: 100%;">
+        <div class="container row align-items-center" style="height: auto; max-width: 100% !important; margin-top: -90px;">
+                
+            <div class="col-xs-12 col-sm-6 col-md-2">
+            </div>
+
+
+            <!--<div id="imgC3" class="col-xs-12 col-sm-6 col-md-2" style="display: none;">                                
+            </div>-->
+
+            <div id="imgC" class="col-xs-12 col-sm-6 col-md-3" >
+                <img src="images/2daSeccion.png" alt="phone" class="img-fluid">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-5 vcenter">
+                <div class="row rowForm">
+                    <div class="col-md-12" style="padding-bottom: 5px;">
+                        <img src="images/LogoBLC.png" alt="phone" class="img-fluid" width="290" height="290">
+                        <br/><br/>
+                        Queremos verte crecer, Gracias por permitirnos esta oportunidad.
+                    </div>                  
+                    
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <div class="form-group"> <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">CURP: </label>
+                            <input type="text" class="form-control textColor text-center" id="curp" name="full_name" ng-model="usuario.curp" onkeyup="this.value=usuarioText(this.value)" maxlength="18">
+                        </div>
+                    </div>
+
+                    <div id="div3" style="width: 100%; display: none;">
+
+                        <div class="col-md-12">
+
+                            <div class="form-group text-center"> <!-- Full Name -->
+
+                                <label for="full_name_id" class="control-label">Folio</label>
+
+                                <input type="password" class="form-control textColor text-center" id="folio" name="full_name" ng-model="usuario.contrasena" onkeyup="this.value=usuarioText(this.value)" maxlength="15">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12">
+
+                            <div class="form-group text-center"> <!-- Full Name -->
+                                <span id="minutes"></span>:<span id="seconds"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="div4" class="row" style="display: none;">
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">RFC</label>
+                                <input type="text" class="form-control textColor" id="rfc" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.rfc">
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Nombre</label>
+                                <input type="text" class="form-control textColor" id="nombre" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.name">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Apellido paterno</label>
+                                <input type="text" class="form-control textColor" id="ap1" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.firstName">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Apellido materno</label>
+                                <input type="text" class="form-control textColor" id="ap2" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.secondName">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Celular:</label>
+                                <input type="number" class="form-control textColor" id="cel" name="full_name" ng-model="objModelo.phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Tipo de sangre</label>
+                                <div>          
+                                    <select class="col-sm-12 form-control textColor" id="sangre" data-live-search="true" ng-model="objModelo.bloodType">
+                                      <option disabled selected value style="color: #CCC;"> Selecciona una opción</option>
+                                      <option value='A-'>A Negativo</option>
+                                      <option value='A+'>A Positivo</option>
+                                      <option value='AB+'>AB Positivo</option>
+                                      <option value='B-'>B Negativo</option>
+                                      <option value='B+'>B Positivo</option>
+                                      <option value='O+'>O Positivo</option>
+                                      <option value='O-'>O Negativo</option>
+                                      <option value='NR'>No Registrada</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Contacto de emergencia</label>
+                                <input type="text" class="form-control textColor" id="contacto_emrg" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.nameEmergency">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Telefono de contacto</label>
+                                <input type="text" class="form-control textColor" id="cel_contacto_emrg" name="full_name" ng-model="objModelo.tELEmergency">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Estado</label>
+                                <input type="text" class="form-control textColor" id="estado" name="full_name" ng-model="objModelo.region$_identifier">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Municipio</label>
+                                <input type="text" class="form-control textColor" id="municipio" name="full_name" ng-model="objModelo.town$_identifier">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Postal</label>
+                                <input type="number" class="form-control textColor" id="postal" name="full_name" ng-model="objModelo.postal">
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Colonia</label>
+                                <input type="text" class="form-control textColor" id="col" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.colony">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Calle</label>
+                                <input type="text" class="form-control textColor" id="calle" name="full_name" onkeyup="this.value=usuarioText(this.value)" ng-model="objModelo.street">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Numero Exterior</label>
+                                <input type="number" class="form-control textColor" id="numext" name="full_name" ng-model="objModelo.externalNumber">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group"> <!-- Full Name -->
+                                <label for="full_name_id" class="control-label">Numero Interior</label>
+                                <input type="text" class="form-control textColor" id="numint" name="full_name" ng-model="objModelo.internalNumber">
+                            </div>
+                        </div>
+                        
+                        
+
+                        
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group"> 
+                            <a id="btn1" class="btn btn-lg btn-success" ng-click="getEmpleado()" style="color: #FFF;
+                            text-decoration: none;    
+                            width: 300px;    
+                            height: 60px;    
+                            padding-top: 20px;    
+                            cursor: pointer;">    
+                            <span class="fa fa-search mr-2"></span>
+    
+                                Consulta
+    
+                            </a>
+
+                            <a id="btn2" class="btn btn-lg btn-success" ng-click="getDatosEmpleados()" style="color: #FFF;
+                            text-decoration: none;    
+                            width: 300px;    
+                            height: 60px;    
+                            padding-top: 20px;   
+                            display: none; 
+                            cursor: pointer;">    
+                            <span class="fa fa-search mr-2"></span>
+    
+                                Validar
+    
+                            </a>
+
+                            <a id="btn3" class="btn btn-lg btn-success" ng-click="saveData()" style="color: #FFF;
+                            text-decoration: none;    
+                            width: 300px;    
+                            height: 60px;    
+                            padding-top: 20px;   
+                            display: none;
+                            cursor: pointer;">    
+                            <span class="fa fa-search mr-2"></span>
+    
+                                Guardar Datos
+    
+                            </a>
+                        </div>
+                    </div>
+
+                 
+                </div>
+            </div>
+            
+            <div  id="tempDiv" class="col-xs-12 col-sm-6 col-md-2 col-md-offset-2">             
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-md-offset-12" style="position: absolute; padding-top: 25px; bottom: 0px;">             
+                <p class="mb-2" style="color: #FFF; opacity: 0.8;"><small>COPYRIGHT © 2019. TODOS LOS DERECHOS RESERVADOS <strong style="color: #FFF; opacity: 0.8;">CREDICER</strong></small></p>
+
+                <small>                    
+                    <a href="Terminos/privacidadcandidatos.html" class="m-2" target="_blank">Terminos</a>
+                    |
+                    <a href="Terminos/privacidadcandidatos.html" class="m-2">Privacidad</a>
+                </small>
+            </div>
+        </div>        
+    </header>
+
+
+</div>
+
+<!-- popover bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<!-- Plugins JS -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+<!-- Carrusel JS -->
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+
+   <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '309172763053630');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" src="https://www.facebook.com/tr?id=309172763053630&ev=PageView
+            &noscript=1"/>
+        </noscript>
+
+<script type="text/javascript">
+        function usuarioText(string){//solo letras y numeros
+            var out = '';
+            var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890 ';//Caracteres validos
+            for (var i=0; i<string.length; i++)
+
+            if (filtro.indexOf(string.charAt(i)) != -1) 
+                out += string.charAt(i).toUpperCase();
+            return out;
+
+        }
+</script>
